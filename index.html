@@ -5,381 +5,435 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Rush Creative Studio - Explore digital art, sketches, wallpapers, photography and creative inspiration.">
-<meta name="keywords" content="Rush Creative Studio, digital art, sketches, wallpapers, photography">
-<meta name="author" content="Rush Creative Studio">
-<meta name="google-site-verification" content="C2hReg0xC118jTLZDeJ94v-Kd0W8PZjB5cGeoP5Y4Ss">
-<meta name="theme-color" content="#080a12">
+<title>Rush Creative Studio | Art, Sketches & Wallpapers</title>
 
-<link rel="icon" type="image/png" href="favicon.jpg">
+<meta name="description" content="Explore beautiful sketches, custom pencil portraits, digital art, aesthetic wallpapers and photography at Rush Creative Studio. Affordable personalised artwork.">
+
+<meta name="keywords" content="Rush Creative Studio, pencil portraits, custom portraits, digital art, sketches, wallpapers, photography, affordable artwork">
+
+<meta name="author" content="Rush Creative Studio">
+
+<!-- WEBSITE ICON -->
+<link rel="icon" type="image/jpeg" href="favicon.jpg">
 <link rel="apple-touch-icon" href="favicon.jpg">
 
-<title>Rush Creative Studio | Creativity Without Limits</title>
+<meta name="google-site-verification" content="C2hReg0xC118jTLZDeJ94v-Kd0W8PZjB5cGeoP5Y4Ss">
+
+<meta property="og:title" content="Rush Creative Studio">
+<meta property="og:description" content="Discover creativity, art and beautiful inspiration.">
+<meta property="og:type" content="website">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --bg:#090911;
+  --surface:#131321;
+  --surface2:#1b1b2d;
+  --text:#f5f2ff;
+  --muted:#aaa6bc;
+  --purple:#a78bfa;
+  --pink:#f472b6;
+  --border:rgba(255,255,255,.09);
 }
 
-html {
-  scroll-behavior: smooth;
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
+
+html { scroll-behavior:smooth; }
 
 body {
-  background: #080a12;
-  color: #f5f5fa;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,sans-serif;
+  line-height:1.65;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  color:inherit;
+  text-decoration:none;
 }
 
 .container {
-  width: 90%;
-  max-width: 1150px;
-  margin: auto;
+  width:min(1120px,90%);
+  margin:auto;
 }
-
-/* NAVIGATION */
 
 header {
-  background: rgba(8,10,18,.95);
-  border-bottom: 1px solid #242638;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(15px);
-}
-
-.navbar {
-  min-height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.logo {
-  font-size: 21px;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
-
-.logo span {
-  color: #a879ff;
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(9,9,17,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
 }
 
 nav {
-  display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
-nav a {
-  color: #c0c2d0;
-  font-size: 14px;
-  transition: .3s;
+.logo {
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:-.8px;
 }
 
-nav a:hover {
-  color: #b78cff;
+.logo span { color:var(--purple); }
+
+.nav-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  font-size:13px;
+  color:var(--muted);
 }
 
-/* HERO */
+.nav-links a:hover { color:var(--pink); }
 
 .hero {
-  min-height: 580px;
-  display: flex;
-  align-items: center;
+  min-height:480px;
+  display:flex;
+  align-items:center;
+  padding:85px 0;
   background:
-    radial-gradient(circle at 80% 30%, #30205d 0%, transparent 35%),
-    linear-gradient(135deg, #080a12, #111629);
-  padding: 80px 0;
+    radial-gradient(ellipse at 75% 30%,rgba(167,139,250,.22),transparent 40%),
+    radial-gradient(ellipse at 20% 90%,rgba(244,114,182,.13),transparent 40%);
 }
 
-.hero-content {
-  max-width: 760px;
+.eyebrow {
+  color:var(--pink);
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-transform:uppercase;
 }
 
-.hero small {
-  color: #75d6ff;
-  letter-spacing: 4px;
-  font-weight: bold;
+h1 {
+  font-size:clamp(42px,7vw,76px);
+  line-height:1.08;
+  letter-spacing:-3px;
+  margin:20px 0;
+  max-width:760px;
 }
 
-.hero h1 {
-  font-size: clamp(45px, 8vw, 82px);
-  line-height: 1.08;
-  margin: 20px 0;
-}
-
-.gradient {
-  background: linear-gradient(90deg, #a879ff, #ff78cb, #69d6ff);
-  -webkit-background-clip: text;
-  color: transparent;
+h1 span {
+  background:linear-gradient(90deg,var(--purple),var(--pink));
+  color:transparent;
+  background-clip:text;
 }
 
 .hero p {
-  color: #b7bbce;
-  font-size: 17px;
-  max-width: 650px;
+  max-width:590px;
+  color:var(--muted);
+  font-size:16px;
 }
 
 .btn {
-  display: inline-block;
-  padding: 13px 23px;
-  border-radius: 30px;
-  margin: 25px 10px 0 0;
-  font-weight: bold;
-  background: linear-gradient(90deg, #8054ed, #bd62e9);
-  transition: .3s;
+  display:inline-block;
+  margin-top:27px;
+  padding:13px 23px;
+  border-radius:9px;
+  background:linear-gradient(110deg,#8b5cf6,#db70c0);
+  color:white;
+  font-size:14px;
+  font-weight:bold;
+  border:0;
+  cursor:pointer;
 }
 
-.btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px #8756ed55;
+.btn:hover { opacity:.85; }
+
+section { padding:75px 0; }
+
+.section-heading { margin-bottom:28px; }
+
+.section-heading h2 {
+  font-size:clamp(27px,4vw,38px);
+  letter-spacing:-1px;
 }
 
-.btn-outline {
-  background: transparent;
-  border: 1px solid #9b79ef;
+.section-heading p {
+  color:var(--muted);
+  margin-top:7px;
 }
 
-/* GENERAL SECTIONS */
-
-section {
-  padding: 75px 0;
+.categories {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
 }
 
-.section-title {
-  font-size: 35px;
-  margin-bottom: 10px;
+.category {
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:15px;
+  padding:24px 12px;
+  text-align:center;
+  transition:.25s;
 }
 
-.section-description {
-  color: #aeb2c4;
-  margin-bottom: 30px;
+.category:hover {
+  transform:translateY(-5px);
+  border-color:var(--purple);
 }
 
-.accent {
-  color: #ae86ff;
+.category .emoji {
+  font-size:30px;
+  display:block;
+  margin-bottom:9px;
 }
 
-/* SEARCH AND FILTERS */
+.category strong { font-size:13px; }
 
-.search-area {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 25px 0;
+.controls {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-bottom:25px;
 }
 
-.search-area input {
-  flex: 1;
-  min-width: 220px;
-  padding: 14px;
-  border-radius: 12px;
-  background: #141827;
-  border: 1px solid #33374c;
-  color: white;
-  outline: none;
+.controls input {
+  flex:1;
+  min-width:220px;
+  padding:13px 16px;
+  border:1px solid var(--border);
+  border-radius:9px;
+  color:white;
+  background:var(--surface);
+  outline:none;
 }
 
-.search-area input:focus {
-  border-color: #a879ff;
+.controls input:focus { border-color:var(--purple); }
+
+.filter {
+  padding:11px 16px;
+  border:1px solid var(--border);
+  border-radius:9px;
+  background:var(--surface);
+  color:var(--muted);
+  cursor:pointer;
 }
 
-.filter-btn {
-  background: #171b2b;
-  color: #d3d4df;
-  border: 1px solid #33374c;
-  padding: 11px 17px;
-  border-radius: 25px;
-  cursor: pointer;
+.filter.active,.filter:hover {
+  background:var(--surface2);
+  color:var(--pink);
+  border-color:var(--purple);
 }
 
-.filter-btn.active,
-.filter-btn:hover {
-  background: #8054ed;
-  color: white;
+.posts-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
-/* GALLERY */
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+.post-card {
+  overflow:hidden;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  transition:.25s;
 }
 
-.card {
-  background: #131827;
-  border: 1px solid #292e41;
-  border-radius: 18px;
-  overflow: hidden;
-  transition: .3s;
+.post-card:hover {
+  transform:translateY(-5px);
+  border-color:rgba(167,139,250,.6);
 }
 
-.card:hover {
-  transform: translateY(-7px);
-  border-color: #9465ed;
-  box-shadow: 0 12px 35px #0008;
+.post-card img {
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  display:block;
+  background:var(--surface2);
 }
 
-.card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  display: block;
-  background: #20243a;
-}
-
-.card-content {
-  padding: 19px;
-}
+.post-content { padding:20px; }
 
 .tag {
-  display: inline-block;
-  color: #c5a9ff;
-  background: #31244e;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: bold;
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:1.7px;
+  color:var(--pink);
+  text-transform:uppercase;
 }
 
-.card h3 {
-  margin: 12px 0 7px;
+.post-content h3 {
+  font-size:19px;
+  margin:8px 0;
 }
 
-.card p {
-  color: #aeb2c4;
-  font-size: 14px;
-  margin-bottom: 15px;
+.post-content p {
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:15px;
 }
 
-.download-btn {
-  display: inline-block;
-  background: #242c42;
-  border: 1px solid #6473a0;
-  padding: 9px 13px;
-  border-radius: 9px;
-  font-size: 13px;
-  font-weight: bold;
+.post-link {
+  display:inline-block;
+  color:var(--purple);
+  font-size:13px;
+  font-weight:bold;
 }
 
-.download-btn:hover {
-  background: #8054ed;
-}
+.post-link:hover { color:var(--pink); }
 
-/* FEATURE */
+.no-results {
+  display:none;
+  color:var(--muted);
+  padding:30px 0;
+}
 
 .feature {
-  background: linear-gradient(120deg, #19132d, #111b2b);
-  border: 1px solid #37304f;
-  padding: 38px;
-  border-radius: 22px;
+  background:linear-gradient(120deg,#19152a,#211528);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:45px;
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:30px;
+  align-items:center;
 }
 
 .feature h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
+  font-size:32px;
+  line-height:1.2;
+  margin:12px 0;
 }
 
-.feature p {
-  color: #b7bbce;
+.feature p { color:var(--muted); }
+
+.feature-art {
+  font-size:100px;
+  text-align:center;
 }
 
-/* ABOUT */
-
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+.about-box {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
-.about-card {
-  background: #141a29;
-  padding: 25px;
-  border: 1px solid #2b3043;
-  border-radius: 15px;
+.about-item {
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:25px;
 }
 
-.about-card h3 {
-  margin-bottom: 10px;
-  color: #bd9aff;
+.about-item h3 { margin-bottom:8px; }
+
+.about-item p {
+  color:var(--muted);
+  font-size:13px;
 }
 
-.about-card p {
-  color: #b5b9ca;
+/* CUSTOM ARTWORK SECTION */
+
+.contact-section {
+  background:linear-gradient(135deg,#19152b,#24162b);
+  border:1px solid rgba(167,139,250,.3);
+  border-radius:20px;
+  padding:45px 30px;
+  text-align:center;
 }
 
-/* CONTACT */
-
-.contact {
-  background: linear-gradient(130deg, #21183b, #142331);
-  padding: 40px;
-  border-radius: 22px;
-  border: 1px solid #44365e;
+.contact-section h2 {
+  font-size:clamp(27px,4vw,38px);
+  margin:12px 0;
 }
 
-.contact p {
-  color: #c0c3d2;
-  margin-top: 12px;
+.contact-section p {
+  color:var(--muted);
+  margin:12px auto;
+  max-width:650px;
+}
+
+.services {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  max-width:570px;
+  margin:25px auto;
+}
+
+.service {
+  background:rgba(255,255,255,.05);
+  padding:15px;
+  border:1px solid var(--border);
+  border-radius:10px;
+}
+
+.contact-buttons {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:13px;
+  margin:25px 0;
+}
+
+.contact-button {
+  display:inline-block;
+  padding:13px 21px;
+  border-radius:9px;
+  color:white;
+  font-weight:bold;
+  font-size:14px;
+  transition:.2s;
+}
+
+.contact-button:hover { opacity:.82; }
+
+.email-button {
+  background:linear-gradient(110deg,#8b5cf6,#db70c0);
+}
+
+.whatsapp-button {
+  background:#168b57;
 }
 
 footer {
-  border-top: 1px solid #252a3b;
-  padding: 30px 0;
-  text-align: center;
-  color: #969bad;
-  font-size: 13px;
+  border-top:1px solid var(--border);
+  padding:35px 0;
+  color:var(--muted);
+  text-align:center;
+  font-size:13px;
 }
 
-/* MOBILE */
+footer strong { color:var(--purple); }
 
-@media(max-width: 800px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
+@media(max-width:850px) {
+  .posts-grid { grid-template-columns:repeat(2,1fr); }
+  .categories { grid-template-columns:repeat(3,1fr); }
 }
 
-@media(max-width: 550px) {
-  .navbar {
-    flex-direction: column;
-    padding: 18px 0;
-  }
-
+@media(max-width:560px) {
   nav {
-    justify-content: center;
-    gap: 13px;
+    align-items:flex-start;
+    padding:17px 0;
+    flex-direction:column;
   }
 
-  .gallery {
-    grid-template-columns: 1fr;
-  }
+  .nav-links { gap:12px; }
 
-  .hero {
-    min-height: 480px;
-  }
+  .posts-grid { grid-template-columns:1fr; }
 
-  .hero h1 {
-    font-size: 48px;
-  }
+  .categories { grid-template-columns:repeat(2,1fr); }
 
-  .contact,
   .feature {
-    padding: 24px;
+    grid-template-columns:1fr;
+    padding:27px;
   }
+
+  .feature-art { font-size:65px; }
+
+  h1 { letter-spacing:-1.5px; }
+
+  .services { grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -387,335 +441,488 @@ footer {
 <body>
 
 <header>
-  <div class="container navbar">
-    <a class="logo" href="#home">RUSH <span>STUDIO.</span></a>
+<nav class="container">
+  <a class="logo" href="#">RUSH<span>.</span> STUDIO</a>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#explore">Explore</a>
-      <a href="#wallpapers">Wallpapers</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#categories">Explore</a>
+    <a href="#posts">Posts</a>
+    <a href="#about">About</a>
+    <a href="#custom-orders">Custom Art</a>
   </div>
+</nav>
 </header>
+
+<main>
 
 <!-- HERO -->
 
 <section class="hero" id="home">
-  <div class="container hero-content">
-    <small>WELCOME TO RUSH CREATIVE STUDIO</small>
+<div class="container">
 
-    <h1>
-      Creativity<br>
-      Without <span class="gradient">Limits.</span>
-    </h1>
+  <div class="eyebrow">Welcome to Rush Creative Studio</div>
 
-    <p>
-      Discover beautiful digital art, creative sketches,
-      stunning wallpapers and inspiring ideas.
-      A creative space where imagination becomes something special.
-    </p>
+  <h1>
+    Where creativity<br>
+    meets <span>imagination.</span>
+  </h1>
 
-    <a class="btn" href="#explore">Explore Collection</a>
-    <a class="btn btn-outline" href="#contact">Work With Us</a>
-  </div>
+  <p>
+    A creative corner for digital art, beautiful wallpapers,
+    sketches, photography and ideas that inspire.
+    Explore something new and let your imagination grow.
+  </p>
+
+  <a class="btn" href="#posts">Explore the studio →</a>
+
+</div>
 </section>
 
-<!-- EXPLORE -->
+<!-- CATEGORIES -->
 
-<section id="explore">
-  <div class="container">
+<section id="categories">
+<div class="container">
 
-    <h2 class="section-title">
-      Explore <span class="accent">Our World</span>
-    </h2>
+  <div class="section-heading">
+    <div class="eyebrow">Find your inspiration</div>
+    <h2>Explore Categories</h2>
+    <p>Discover different corners of creativity.</p>
+  </div>
 
-    <p class="section-description">
-      Find inspiration in every little detail.
-    </p>
+  <div class="categories">
 
-    <div class="search-area">
-      <input
-        type="search"
-        id="searchInput"
-        placeholder="Search for something..."
-      >
+    <a class="category" href="#posts" data-jump="Digital Art">
+      <span class="emoji">🎨</span>
+      <strong>Digital Art</strong>
+    </a>
 
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="Digital Art">Digital Art</button>
-      <button class="filter-btn" data-filter="Sketches">Sketches</button>
-      <button class="filter-btn" data-filter="Photography">Photography</button>
-    </div>
+    <a class="category" href="#posts" data-jump="Sketches">
+      <span class="emoji">✏️</span>
+      <strong>Sketches</strong>
+    </a>
 
-    <div class="gallery" id="mainGallery">
+    <a class="category" href="#posts" data-jump="Wallpapers">
+      <span class="emoji">🌌</span>
+      <strong>Wallpapers</strong>
+    </a>
 
-      <article class="card" data-category="Digital Art">
-        <img src="dark-blue-abstract-wallpaper.png"
-             alt="Abstract dark blue digital artwork">
-        <div class="card-content">
-          <span class="tag">DIGITAL ART</span>
-          <h3>Midnight Flow</h3>
-          <p>Beautiful flowing blue textures and abstract details.</p>
-        </div>
-      </article>
+    <a class="category" href="#posts" data-jump="Photography">
+      <span class="emoji">📷</span>
+      <strong>Photography</strong>
+    </a>
 
-      <article class="card" data-category="Sketches">
-        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=85"
-             alt="Art supplies and creative workspace">
-        <div class="card-content">
-          <span class="tag">SKETCHES</span>
-          <h3>Creative Beginnings</h3>
-          <p>Every beautiful creation starts with a single idea.</p>
-        </div>
-      </article>
-
-      <article class="card" data-category="Photography">
-        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=85"
-             alt="Beautiful mountain scenery">
-        <div class="card-content">
-          <span class="tag">PHOTOGRAPHY</span>
-          <h3>Nature's Beauty</h3>
-          <p>Discover the beauty hidden in everyday moments.</p>
-        </div>
-      </article>
-
-    </div>
-
-    <p id="noResults" style="display:none;color:#aaa;margin-top:20px;">
-      No matching posts found.
-    </p>
+    <a class="category" href="#posts" data-jump="Tutorials">
+      <span class="emoji">💡</span>
+      <strong>Tutorials</strong>
+    </a>
 
   </div>
+</div>
 </section>
 
-<!-- WALLPAPER GALLERY -->
+<!-- POSTS -->
 
-<section id="wallpapers">
-  <div class="container">
+<section id="posts">
+<div class="container">
 
-    <h2 class="section-title">
-      Wallpaper <span class="accent">Collection</span>
-    </h2>
-
-    <p class="section-description">
-      Download beautiful backgrounds for your phone and computer.
-    </p>
-
-    <div class="gallery">
-
-      <article class="card">
-        <img src="dark-blue-abstract-wallpaper.png"
-             alt="Dark blue abstract wallpaper">
-        <div class="card-content">
-          <span class="tag">ABSTRACT</span>
-          <h3>Midnight Flow</h3>
-          <p>A mysterious dark blue abstract design.</p>
-
-          <a class="download-btn"
-             href="dark-blue-abstract-wallpaper.png"
-             download>
-             ↓ Download Wallpaper
-          </a>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="black-gold-cars-bikes-wallpaper.png"
-             alt="Luxury black and gold cars and motorcycle wallpaper">
-        <div class="card-content">
-          <span class="tag">LUXURY</span>
-          <h3>Black & Gold Dreams</h3>
-          <p>A dramatic combination of luxury cars and bikes.</p>
-
-          <a class="download-btn"
-             href="black-gold-cars-bikes-wallpaper.png"
-             download>
-             ↓ Download Wallpaper
-          </a>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="black-motorcycle-wallpaper.png"
-             alt="Black motorcycle wallpaper">
-        <div class="card-content">
-          <span class="tag">MOTORCYCLE</span>
-          <h3>Night Rider</h3>
-          <p>A stylish black motorcycle in a cinematic city setting.</p>
-
-          <a class="download-btn"
-             href="black-motorcycle-wallpaper.png"
-             download>
-             ↓ Download Wallpaper
-          </a>
-        </div>
-      </article>
-
-    </div>
+  <div class="section-heading">
+    <div class="eyebrow">The creative collection</div>
+    <h2>Latest Discoveries</h2>
+    <p>Explore our collection of creative inspiration.</p>
   </div>
+
+  <div class="controls">
+
+    <input
+      id="searchInput"
+      type="search"
+      placeholder="Search art, wallpapers, sketches..."
+      aria-label="Search posts">
+
+    <button class="filter active" data-filter="All">All</button>
+    <button class="filter" data-filter="Digital Art">Art</button>
+    <button class="filter" data-filter="Sketches">Sketches</button>
+    <button class="filter" data-filter="Wallpapers">Wallpapers</button>
+    <button class="filter" data-filter="Photography">Photography</button>
+    <button class="filter" data-filter="Tutorials">Tutorials</button>
+
+  </div>
+
+  <div class="posts-grid" id="postsGrid">
+
+    <article class="post-card" data-category="Digital Art">
+      <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800" alt="Creative art and painting" loading="lazy">
+      <div class="post-content">
+        <div class="tag">Digital Art</div>
+        <h3>The World of Colour</h3>
+        <p>Explore the beauty of colours, shapes and imagination. Every creative journey begins with an idea.</p>
+        <a class="post-link" href="#about">Explore more →</a>
+      </div>
+    </article>
+
+    <article class="post-card" data-category="Wallpapers">
+      <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800" alt="Beautiful sunrise landscape wallpaper" loading="lazy">
+      <div class="post-content">
+        <div class="tag">Wallpapers</div>
+        <h3>Golden Morning</h3>
+        <p>A peaceful landscape for a fresh and beautiful screen background.</p>
+        <a class="post-link" href="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1600" download="golden-morning.jpg">Download image ↓</a>
+      </div>
+    </article>
+
+    <article class="post-card" data-category="Sketches">
+      <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800" alt="Artist drawing" loading="lazy">
+      <div class="post-content">
+        <div class="tag">Sketches</div>
+        <h3>From a Blank Page</h3>
+        <p>Every masterpiece starts with a simple line. Keep practising and exploring your style.</p>
+        <a class="post-link" href="#about">Explore more →</a>
+      </div>
+    </article>
+
+    <article class="post-card" data-category="Photography">
+      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800" alt="Mountain and lake landscape" loading="lazy">
+      <div class="post-content">
+        <div class="tag">Photography</div>
+        <h3>Nature's Quiet Moments</h3>
+        <p>Beautiful landscapes remind us to notice the little details around us.</p>
+        <a class="post-link" href="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1600" target="_blank" rel="noopener">View photograph →</a>
+      </div>
+    </article>
+
+    <article class="post-card" data-category="Tutorials">
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800" alt="Notebook for creative ideas" loading="lazy">
+      <div class="post-content">
+        <div class="tag">Tutorials</div>
+        <h3>Build a Creative Journal</h3>
+        <p>Collect your ideas, sketches, inspirations and memories in one creative notebook.</p>
+        <a class="post-link" href="#about">Explore more →</a>
+      </div>
+    </article>
+
+    <article class="post-card" data-category="Wallpapers">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Beautiful scenic nature wallpaper" loading="lazy">
+      <div class="post-content">
+        <div class="tag">Wallpapers</div>
+        <h3>Escape into Nature</h3>
+        <p>Bring a little calm and natural beauty to your screen.</p>
+        <a class="post-link" href="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600" download="nature-wallpaper.jpg">Download image ↓</a>
+      </div>
+    </article>
+
+    <article class="post-card" data-category="Digital Art">
+      <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800" alt="Colourful abstract artwork" loading="lazy">
+      <div class="post-content">
+        <div class="tag">Digital Art</div>
+        <h3>Abstract Expressions</h3>
+        <p>Experiment with shapes, textures and colours to create your own visual language.</p>
+        <a class="post-link" href="#about">Explore more →</a>
+      </div>
+    </article>
+
+    <article class="post-card" data-category="Photography">
+      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800" alt="Sunlight shining through a forest" loading="lazy">
+      <div class="post-content">
+        <div class="tag">Photography</div>
+        <h3>Into the Green</h3>
+        <p>Discover the atmosphere of forests, sunlight and beautiful natural scenes.</p>
+        <a class="post-link" href="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600" target="_blank" rel="noopener">View photograph →</a>
+      </div>
+    </article>
+
+    <article class="post-card" data-category="Tutorials">
+      <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800" alt="Creative desk and art materials" loading="lazy">
+      <div class="post-content">
+        <div class="tag">Tutorials</div>
+        <h3>Find Your Inspiration</h3>
+        <p>Try new ideas, explore different styles and make time for creativity every day.</p>
+        <a class="post-link" href="#about">Explore more →</a>
+      </div>
+    </article>
+
+    <!-- NEW WALLPAPER 1 -->
+
+    <article class="post-card" data-category="Wallpapers">
+      <img src="dark-blue-abstract-wallpaper.png"
+           alt="Dark blue abstract wallpaper"
+           loading="lazy">
+      <div class="post-content">
+        <div class="tag">Wallpapers</div>
+        <h3>Midnight Flow</h3>
+        <p>A beautiful dark blue abstract wallpaper.</p>
+        <a class="post-link"
+           href="dark-blue-abstract-wallpaper.png"
+           target="_blank" rel="noopener">View Full Size →</a>
+        <br><br>
+        <a class="post-link"
+           href="dark-blue-abstract-wallpaper.png"
+           download>⬇ Download Wallpaper</a>
+      </div>
+    </article>
+
+    <!-- NEW WALLPAPER 2 -->
+
+    <article class="post-card" data-category="Wallpapers">
+      <img src="black-gold-cars-bikes-wallpaper.png"
+           alt="Luxury black and gold cars and bikes wallpaper"
+           loading="lazy">
+      <div class="post-content">
+        <div class="tag">Wallpapers</div>
+        <h3>Black & Gold Luxury</h3>
+        <p>A luxurious black and gold car and bike wallpaper.</p>
+        <a class="post-link"
+           href="black-gold-cars-bikes-wallpaper.png"
+           target="_blank" rel="noopener">View Full Size →</a>
+        <br><br>
+        <a class="post-link"
+           href="black-gold-cars-bikes-wallpaper.png"
+           download>⬇ Download Wallpaper</a>
+      </div>
+    </article>
+
+    <!-- NEW WALLPAPER 3 -->
+
+    <article class="post-card" data-category="Wallpapers">
+      <img src="black-motorcycle-wallpaper.png"
+           alt="Dark luxury motorcycle wallpaper"
+           loading="lazy">
+      <div class="post-content">
+        <div class="tag">Wallpapers</div>
+        <h3>Night Rider</h3>
+        <p>A stylish dark motorcycle wallpaper for your screen.</p>
+        <a class="post-link"
+           href="black-motorcycle-wallpaper.png"
+           target="_blank" rel="noopener">View Full Size →</a>
+        <br><br>
+        <a class="post-link"
+           href="black-motorcycle-wallpaper.png"
+           download>⬇ Download Wallpaper</a>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="no-results" id="noResults">
+    No posts found. Try another search!
+  </p>
+
+</div>
 </section>
 
-<!-- CREATIVE FEATURE -->
+<!-- FEATURE -->
 
 <section>
-  <div class="container">
-    <div class="feature">
+<div class="container">
 
-      <h2>
-        Your imagination is your
-        <span class="accent">superpower.</span>
-      </h2>
+  <div class="feature">
+    <div>
+      <div class="eyebrow">A little inspiration</div>
+
+      <h2>Your imagination deserves a place to grow.</h2>
 
       <p>
-        Explore new ideas, create something different,
-        experiment with colours and discover your own
-        creative style. There are no limits to imagination.
+        Whether you love drawing, photography, digital design
+        or collecting beautiful wallpapers, there is always
+        something new to discover.
       </p>
 
-      <a href="#contact" class="btn">Create Something Special</a>
-
+      <a class="btn" href="#categories">Discover categories →</a>
     </div>
+
+    <div class="feature-art">✦ 🎨 ✦</div>
   </div>
+
+</div>
 </section>
 
 <!-- ABOUT -->
 
 <section id="about">
-  <div class="container">
+<div class="container">
 
-    <h2 class="section-title">
-      About <span class="accent">Our Studio</span>
-    </h2>
-
-    <p class="section-description">
-      A little creative corner made for people who love imagination.
-    </p>
-
-    <div class="about-grid">
-
-      <div class="about-card">
-        <h3>🎨 Digital Art</h3>
-        <p>
-          Explore creative designs, digital artwork
-          and colourful inspiration.
-        </p>
-      </div>
-
-      <div class="about-card">
-        <h3>✏️ Sketches</h3>
-        <p>
-          Discover hand-drawn portraits, pencil sketches
-          and artistic creations.
-        </p>
-      </div>
-
-      <div class="about-card">
-        <h3>🌌 Wallpapers</h3>
-        <p>
-          Find beautiful backgrounds to give your
-          devices a fresh new appearance.
-        </p>
-      </div>
-
-    </div>
+  <div class="section-heading">
+    <div class="eyebrow">Behind the studio</div>
+    <h2>About Rush Creative Studio</h2>
+    <p>A little space made for people who love creativity.</p>
   </div>
+
+  <div class="about-box">
+
+    <div class="about-item">
+      <h3>🎨 Creativity</h3>
+      <p>Discover artistic ideas, creative experiments and inspiration.</p>
+    </div>
+
+    <div class="about-item">
+      <h3>🌌 Inspiration</h3>
+      <p>Explore beautiful visuals and ideas for your next project.</p>
+    </div>
+
+    <div class="about-item">
+      <h3>✨ Discovery</h3>
+      <p>Find new things to learn, create and enjoy.</p>
+    </div>
+
+  </div>
+</div>
 </section>
 
-<!-- CONTACT -->
+<!-- CUSTOM ART & ORDERS -->
 
-<section id="contact">
-  <div class="container">
+<section id="custom-orders">
+<div class="container">
 
-    <div class="contact">
+  <div class="contact-section">
 
-      <span class="accent">CUSTOM CREATIVE REQUESTS</span>
+    <div class="eyebrow">Let's create something special</div>
 
-      <h2 class="section-title">
-        Your Ideas, Our Creativity.
-      </h2>
+    <h2>Your Ideas, Our Creativity ✨</h2>
 
-      <p>
-        Want a custom pencil portrait, personalised sketch,
-        digital artwork or another creative design?
+    <p>
+      Have something special in mind?
+      Want a beautiful hand-drawn portrait,
+      a custom sketch or a creative design?
+    </p>
 
-        Send us a message and tell us your idea!
-      </p>
+    <p>
+      We create personalised artwork and creative
+      designs at affordable prices.
+      Beautiful creations don't have to cost a fortune!
+    </p>
 
-      <p>
-        Beautiful creations don't have to cost a fortune.
-        We aim to offer affordable creative work.
-        Prices can be discussed before confirming an order.
-      </p>
+    <div class="services">
 
-      <a class="btn"
+      <div class="service">✏️ Custom Pencil Portraits</div>
+      <div class="service">🎨 Personalised Sketches</div>
+      <div class="service">🖼️ Custom Artwork</div>
+      <div class="service">💡 Other Creative Requests</div>
+
+    </div>
+
+    <p>
+      Have an idea? Send us a message!
+      Tell us what you want, and we'll discuss the details and price.
+    </p>
+
+    <div class="contact-buttons">
+
+      <a class="contact-button email-button"
          href="mailto:rushjournal412@gmail.com?subject=Custom%20Art%20Request">
-         Email Us
+         ✉️ Email Us
       </a>
 
-      <a class="btn btn-outline"
+      <a class="contact-button whatsapp-button"
          href="https://wa.me/94714754346"
          target="_blank"
          rel="noopener">
-         WhatsApp Us
+         💬 WhatsApp Us
       </a>
 
     </div>
+
+    <p>Email: rushjournal412@gmail.com</p>
+
+    <p>
+      Affordable prices • Personalised creations • Made with creativity
+    </p>
+
   </div>
+
+</div>
 </section>
 
-<footer>
-  <div class="container">
-    <p>© 2026 Rush Creative Studio. All rights reserved.</p>
-    <p>Made with creativity ✦</p>
-  </div>
-</footer>
+</main>
 
-<!-- SEARCH AND FILTER SCRIPT -->
+<!-- FOOTER -->
+
+<footer>
+<div class="container">
+
+  <p><strong>RUSH CREATIVE STUDIO</strong></p>
+
+  <p>Made with creativity and imagination.</p>
+
+  <p>
+    <a href="#home">Home</a> |
+    <a href="#posts">Explore</a> |
+    <a href="#custom-orders">Custom Art</a>
+  </p>
+
+  <p>© 2026 Rush Creative Studio. All rights reserved.</p>
+
+</div>
+</footer>
 
 <script>
 const searchInput = document.getElementById("searchInput");
-const cards = document.querySelectorAll("#mainGallery .card");
-const filterButtons = document.querySelectorAll(".filter-btn");
+const posts = [...document.querySelectorAll(".post-card")];
+const filters = [...document.querySelectorAll(".filter")];
 const noResults = document.getElementById("noResults");
 
-let activeFilter = "all";
+let currentFilter = "All";
 
-function updateGallery() {
-  const search = searchInput.value.toLowerCase();
-  let visibleCount = 0;
+function updatePosts() {
 
-  cards.forEach(card => {
-    const category = card.dataset.category;
-    const text = card.innerText.toLowerCase();
+  const query = searchInput.value.toLowerCase();
+  let visible = 0;
 
-    const categoryMatch =
-      activeFilter === "all" || category === activeFilter;
+  posts.forEach(post => {
 
-    const searchMatch = text.includes(search);
+    const category = post.dataset.category;
 
-    if (categoryMatch && searchMatch) {
-      card.style.display = "";
-      visibleCount++;
-    } else {
-      card.style.display = "none";
-    }
+    const matchesCategory =
+      currentFilter === "All" || category === currentFilter;
+
+    const matchesSearch =
+      post.textContent.toLowerCase().includes(query);
+
+    const show = matchesCategory && matchesSearch;
+
+    post.style.display = show ? "" : "none";
+
+    if (show) visible++;
+
   });
 
-  noResults.style.display = visibleCount ? "none" : "block";
+  noResults.style.display = visible ? "none" : "block";
 }
 
-searchInput.addEventListener("input", updateGallery);
+searchInput.addEventListener("input", updatePosts);
 
-filterButtons.forEach(button => {
+filters.forEach(button => {
+
   button.addEventListener("click", () => {
-    filterButtons.forEach(btn => btn.classList.remove("active"));
+
+    currentFilter = button.dataset.filter;
+
+    filters.forEach(item => item.classList.remove("active"));
 
     button.classList.add("active");
-    activeFilter = button.dataset.filter;
 
-    updateGallery();
+    updatePosts();
+
   });
+
+});
+
+document.querySelectorAll("[data-jump]").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    currentFilter = link.dataset.jump;
+
+    filters.forEach(item => {
+      item.classList.toggle(
+        "active",
+        item.dataset.filter === currentFilter
+      );
+    });
+
+    updatePosts();
+
+  });
+
 });
 </script>
 
