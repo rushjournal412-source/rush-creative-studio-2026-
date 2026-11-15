@@ -1,165 +1,622 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="C2hReg0xC118jTLZDeJ94v-Kd0W8PZjB5cGeoP5Y4Ss" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rush Creative Studio — explore digital art, sketches, free wallpapers, photography and creative inspiration.">
-  <meta name="theme-color" content="#09090f">
-  <title>Rush Creative Studio — Create. Explore. Inspire.</title>
+  <meta name="description" content="Rush Creative Studio — explore digital art, sketches, aesthetic wallpapers, photography and creative inspiration.">
+  <meta name="keywords" content="digital art, sketches, free wallpapers, aesthetic wallpapers, photography, creative ideas">
+  <meta name="author" content="Rush Creative Studio">
+  <meta name="google-site-verification" content="C2hReg0xC118jTLZDeJ94v-Kd0W8PZjB5cGeoP5Y4Ss">
+  <title>Rush Creative Studio | Art, Ideas & Inspiration</title>
+
   <style>
-    :root{--bg:#09090f;--panel:#12121c;--panel2:#191927;--text:#f5f3ff;--muted:#aaa7bd;--purple:#a78bfa;--blue:#67e8f9;--line:rgba(255,255,255,.09);--grad:linear-gradient(115deg,#a78bfa,#67e8f9)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 75% 0%,rgba(124,58,237,.14),transparent 36%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-    .topline{height:3px;background:var(--grad)}header{position:sticky;top:0;z-index:20;background:rgba(9,9,15,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:.09em;font-size:14px}.brand-mark{width:37px;height:37px;border-radius:12px;background:var(--grad);display:grid;place-items:center;color:#09090f;font-weight:950;font-size:19px;box-shadow:0 0 28px #8b5cf655}
-    .navlinks{display:flex;gap:25px;color:#c8c4d8;font-size:13px}.navlinks a:hover{color:var(--blue)}.navright{display:flex;align-items:center;gap:12px}.pill{border:1px solid var(--line);border-radius:999px;padding:9px 15px;font-size:12px;color:#e9e5ff;background:#ffffff08}
-    .menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 11px}
-    .hero{padding:83px 0 65px;display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center;min-height:560px}.eyebrow{color:var(--blue);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:25px;height:1px;background:var(--blue)}
-    h1{font-size:clamp(44px,6.5vw,78px);line-height:.99;letter-spacing:-.065em;margin:22px 0 20px;font-weight:900}.gradient{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero p{color:var(--muted);font-size:16px;max-width:520px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}.btn{border:0;border-radius:12px;padding:13px 19px;font-weight:750;font-size:13px;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.primary{background:var(--grad);color:#080810;box-shadow:0 10px 35px #8b5cf633}.secondary{background:#ffffff0a;border:1px solid var(--line);color:var(--text)}
-    .hero-art{height:390px;position:relative;border:1px solid #ffffff16;border-radius:28px;overflow:hidden;background:radial-gradient(circle at 65% 30%,#9d4edd 0,transparent 27%),radial-gradient(circle at 25% 70%,#155e75 0,transparent 35%),linear-gradient(145deg,#17132d,#080a14 70%);box-shadow:0 30px 90px #0009}
-    .orb{position:absolute;border-radius:50%;filter:blur(.2px)}.orb.one{width:205px;height:205px;right:45px;top:35px;background:linear-gradient(135deg,#d8b4fe,#6d28d9 55%,#111827);box-shadow:0 0 80px #a855f777}.orb.two{width:120px;height:120px;left:45px;bottom:53px;background:linear-gradient(135deg,#67e8f9,#2563eb);opacity:.8;box-shadow:0 0 65px #22d3ee66}.orb.three{width:72px;height:72px;left:45%;top:42%;background:linear-gradient(135deg,#f0abfc,#7c3aed);opacity:.8}
-    .art-ring{position:absolute;width:300px;height:300px;border:1px solid #ffffff50;border-radius:50%;right:10px;top:45px;transform:rotate(-25deg) scaleY(.58)}.art-ring:after{content:"";position:absolute;inset:22px;border:1px solid #ffffff35;border-radius:50%}
-    .art-caption{position:absolute;bottom:22px;left:23px;right:23px;display:flex;justify-content:space-between;align-items:end}.art-caption strong{font-size:12px;letter-spacing:.16em}.art-caption span{font-size:10px;color:#d7d3e8}
-    .statrow{display:flex;gap:30px;margin-top:34px}.stat strong{display:block;font-size:20px}.stat span{font-size:11px;color:var(--muted)}
-    section{padding:58px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px}.kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--purple);font-weight:800}.section-head h2{font-size:clamp(26px,4vw,39px);letter-spacing:-.04em;margin:6px 0 0}.section-head p{color:var(--muted);font-size:13px;margin:0;max-width:370px}
-    .categories{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.category{padding:22px;border-radius:18px;background:linear-gradient(145deg,#171725,#101019);border:1px solid var(--line);min-height:155px;position:relative;overflow:hidden;transition:.22s;cursor:pointer}.category:hover{transform:translateY(-4px);border-color:#a78bfa66}.category:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-38px;bottom:-55px;background:var(--glow,#8b5cf6);filter:blur(45px);opacity:.3}.cat-icon{font-size:25px}.category h3{margin:14px 0 3px;font-size:16px}.category p{margin:0;color:var(--muted);font-size:12px}.arrow{position:absolute;right:20px;top:22px;color:#c4b5fd}
-    .toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:20px 0 22px;flex-wrap:wrap}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{background:#ffffff08;border:1px solid var(--line);border-radius:999px;padding:8px 13px;color:#c7c2d8;font-size:11px;cursor:pointer}.filter.active,.filter:hover{background:#a78bfa1c;border-color:#a78bfa77;color:#e9ddff}.search{background:#12121c;border:1px solid var(--line);border-radius:11px;padding:10px 13px;color:white;width:min(260px,100%);outline:none}.search:focus{border-color:#a78bfa}
-    .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.post{background:var(--panel);border:1px solid var(--line);border-radius:17px;overflow:hidden;transition:.22s}.post:hover{transform:translateY(-4px);border-color:#a78bfa66}.thumb{height:185px;position:relative;overflow:hidden;display:grid;place-items:center;background:var(--art)}.thumb:before,.thumb:after{content:"";position:absolute;border-radius:50%;filter:blur(1px)}.thumb:before{width:150px;height:150px;background:var(--shape1);top:10px;left:22%}.thumb:after{width:100px;height:100px;background:var(--shape2);right:13%;bottom:5px}.thumb .symbol{font-size:54px;position:relative;z-index:1;filter:drop-shadow(0 8px 22px #0008)}.thumb .thumb-label{position:absolute;z-index:2;left:14px;bottom:12px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;background:#08081099;padding:5px 8px;border-radius:30px}
-    .postbody{padding:17px}.meta{display:flex;justify-content:space-between;color:var(--purple);font-size:10px;text-transform:uppercase;letter-spacing:.09em;font-weight:800}.post h3{font-size:16px;line-height:1.35;margin:10px 0 7px}.post p{font-size:12px;color:var(--muted);margin:0 0 14px}.postfoot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px}.read{font-size:11px;color:var(--blue);font-weight:750;background:none;border:0;padding:0;cursor:pointer}.download{font-size:10px;color:#ddd5ff;background:#a78bfa18;border:1px solid #a78bfa55;border-radius:8px;padding:7px 10px;cursor:pointer}
-    .feature{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;background:linear-gradient(115deg,#17142a,#101722);border:1px solid var(--line);padding:28px;border-radius:23px}.feature-visual{height:260px;border-radius:16px;background:radial-gradient(circle at 30% 35%,#c084fc,transparent 28%),radial-gradient(circle at 70% 70%,#22d3ee,transparent 25%),linear-gradient(135deg,#261447,#080c18);display:grid;place-items:center;font-size:70px}.feature h2{font-size:30px;line-height:1.1;letter-spacing:-.04em}.feature p{font-size:13px;color:var(--muted)}
-    .newsletter{background:linear-gradient(110deg,#21153d,#101a2a);border:1px solid #a78bfa33;border-radius:22px;padding:32px;display:flex;align-items:center;justify-content:space-between;gap:25px}.newsletter h2{margin:0;font-size:25px}.newsletter p{color:var(--muted);font-size:12px;margin:5px 0 0}.newsletter small{color:#c4b5fd}
-    footer{border-top:1px solid var(--line);padding:32px 0 45px;color:var(--muted);font-size:11px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footlinks{display:flex;gap:18px}
-    .modal{display:none;position:fixed;inset:0;background:#030308d9;z-index:50;place-items:center;padding:20px}.modal.open{display:grid}.modalbox{width:min(600px,100%);background:#151521;border:1px solid var(--line);border-radius:20px;padding:25px;max-height:85vh;overflow:auto}.modalbox h2{margin-top:5px}.modalbox p{color:var(--muted);font-size:14px}.close{float:right;background:#ffffff10;border:1px solid var(--line);color:white;border-radius:8px;padding:6px 10px;cursor:pointer}
-    .empty{display:none;color:var(--muted);padding:25px;text-align:center;border:1px dashed var(--line);border-radius:14px;grid-column:1/-1}
-    @media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:55px}.hero-art{height:320px}.posts{grid-template-columns:repeat(2,1fr)}.navlinks{display:none;position:absolute;top:76px;left:0;right:0;padding:18px 25px;background:#0d0d15;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.show{display:flex}.menu{display:block}.navright .pill{display:none}}
-    @media(max-width:600px){.wrap{width:min(100% - 28px,1160px)}.hero{gap:30px}.hero-art{height:270px}.categories{grid-template-columns:repeat(2,1fr)}.posts{grid-template-columns:1fr}.thumb{height:210px}.section-head{display:block}.section-head p{margin-top:8px}.feature{grid-template-columns:1fr;padding:17px}.feature-visual{height:210px}.newsletter{display:block;padding:24px}.newsletter .btn{margin-top:18px}.statrow{gap:20px}}
+    :root {
+      --bg: #090911;
+      --surface: #131321;
+      --surface2: #1b1b2d;
+      --text: #f5f2ff;
+      --muted: #aaa6bc;
+      --purple: #a78bfa;
+      --pink: #f472b6;
+      --border: rgba(255,255,255,.09);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container { width: min(1120px, 90%); margin: auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(9,9,17,.93);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -.8px;
+    }
+
+    .logo span {
+      color: var(--purple);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--pink); }
+
+    .hero {
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      padding: 85px 0;
+      background:
+        radial-gradient(ellipse at 75% 30%, rgba(167,139,250,.22), transparent 40%),
+        radial-gradient(ellipse at 20% 90%, rgba(244,114,182,.13), transparent 40%);
+    }
+
+    .eyebrow {
+      color: var(--pink);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.08;
+      letter-spacing: -3px;
+      margin: 20px 0;
+      max-width: 760px;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, var(--purple), var(--pink));
+      color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      max-width: 590px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 27px;
+      padding: 13px 23px;
+      border-radius: 9px;
+      background: linear-gradient(110deg, #8b5cf6, #db70c0);
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .btn:hover { opacity: .85; }
+
+    section { padding: 75px 0; }
+
+    .section-heading {
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      letter-spacing: -1px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin-top: 7px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .category {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 24px 12px;
+      text-align: center;
+      transition: .25s;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+      border-color: var(--purple);
+    }
+
+    .category .emoji {
+      font-size: 30px;
+      display: block;
+      margin-bottom: 9px;
+    }
+
+    .category strong { font-size: 13px; }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .controls input {
+      flex: 1;
+      min-width: 220px;
+      padding: 13px 16px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      color: white;
+      background: var(--surface);
+      outline: none;
+    }
+
+    .controls input:focus { border-color: var(--purple); }
+
+    .filter {
+      padding: 11px 16px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: var(--surface);
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    .filter.active, .filter:hover {
+      background: var(--surface2);
+      color: var(--pink);
+      border-color: var(--purple);
+    }
+
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .post-card {
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: .25s;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(167,139,250,.6);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+      background: var(--surface2);
+    }
+
+    .post-content { padding: 20px; }
+
+    .tag {
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1.7px;
+      color: var(--pink);
+      text-transform: uppercase;
+    }
+
+    .post-content h3 {
+      font-size: 19px;
+      margin: 8px 0;
+    }
+
+    .post-content p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .post-link {
+      display: inline-block;
+      color: var(--purple);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .post-link:hover { color: var(--pink); }
+
+    .no-results {
+      display: none;
+      color: var(--muted);
+      padding: 30px 0;
+    }
+
+    .feature {
+      background: linear-gradient(120deg, #19152a, #211528);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 45px;
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .feature h2 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 12px 0;
+    }
+
+    .feature p { color: var(--muted); }
+
+    .feature-art {
+      font-size: 100px;
+      text-align: center;
+    }
+
+    .about-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .about-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 25px;
+    }
+
+    .about-item h3 { margin-bottom: 8px; }
+
+    .about-item p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 35px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer strong { color: var(--purple); }
+
+    @media(max-width: 850px) {
+      .posts-grid { grid-template-columns: repeat(2, 1fr); }
+      .categories { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media(max-width: 560px) {
+      nav { align-items: flex-start; padding: 17px 0; flex-direction: column; }
+      .nav-links { gap: 12px; }
+      .posts-grid { grid-template-columns: 1fr; }
+      .categories { grid-template-columns: repeat(2, 1fr); }
+      .feature { grid-template-columns: 1fr; padding: 27px; }
+      .feature-art { font-size: 65px; }
+      h1 { letter-spacing: -1.5px; }
+    }
   </style>
 </head>
+
 <body>
-<div class="topline"></div>
+
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="#home"><span class="brand-mark">R</span><span>RUSH <span class="gradient">CREATIVE</span> STUDIO</span></a>
-    <nav class="navlinks" id="navlinks">
-      <a href="#home">Home</a><a href="#explore">Explore</a><a href="#journal">Journal</a><a href="#about">About</a>
-    </nav>
-    <div class="navright"><a class="pill" href="#journal">Discover something new ↗</a><button class="menu" id="menuBtn" aria-label="Open menu">☰</button></div>
-  </div>
+  <nav class="container">
+    <a class="logo" href="#">RUSH<span>.</span> STUDIO</a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#categories">Explore</a>
+      <a href="#posts">Posts</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
 </header>
 
 <main>
-  <div class="wrap">
-    <section class="hero" id="home">
-      <div>
-        <div class="eyebrow">A little corner of creativity</div>
-        <h1>CREATE.<br><span class="gradient">EXPLORE.</span><br>INSPIRE.</h1>
-        <p>Welcome to Rush Creative Studio — a place for digital art, sketches, beautiful wallpapers and ideas that spark imagination.</p>
-        <div class="actions"><a class="btn primary" href="#explore">Explore collections ↗</a><a class="btn secondary" href="#journal">Read the journal</a></div>
-        <div class="statrow"><div class="stat"><strong>06</strong><span>Creative worlds</span></div><div class="stat"><strong>∞</strong><span>Ideas to explore</span></div><div class="stat"><strong>FREE</strong><span>Wallpaper art</span></div></div>
-      </div>
-      <div class="hero-art" aria-label="Abstract purple and blue digital artwork">
-        <div class="art-ring"></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
-        <div class="art-caption"><strong>ART IS EVERYWHERE</strong><span>COLLECTION 001 / RCS</span></div>
-      </div>
-    </section>
 
-    <section id="explore">
-      <div class="section-head"><div><div class="kicker">Find your inspiration</div><h2>Explore our <span class="gradient">creative worlds.</span></h2></div><p>From tiny pencil details to bold digital worlds — find something that feels like you.</p></div>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="eyebrow">Welcome to Rush Creative Studio</div>
+      <h1>Where creativity<br>meets <span>imagination.</span></h1>
+      <p>
+        A creative corner for digital art, beautiful wallpapers,
+        sketches, photography and ideas that inspire.
+        Explore something new and let your imagination grow.
+      </p>
+      <a class="btn" href="#posts">Explore the studio →</a>
+    </div>
+  </section>
+
+  <section id="categories">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Find your inspiration</div>
+        <h2>Explore Categories</h2>
+        <p>Discover different corners of creativity.</p>
+      </div>
+
       <div class="categories">
-        <a class="category" href="#journal" data-jump="Digital Art" style="--glow:#a855f7"><span class="arrow">↗</span><div class="cat-icon">🎨</div><h3>Digital Art</h3><p>Illustrations, colours & imagination.</p></a>
-        <a class="category" href="#journal" data-jump="Sketches" style="--glow:#d1d5db"><span class="arrow">↗</span><div class="cat-icon">✏️</div><h3>Sketches</h3><p>Pencil art, line work & studies.</p></a>
-        <a class="category" href="#journal" data-jump="Wallpapers" style="--glow:#22d3ee"><span class="arrow">↗</span><div class="cat-icon">📱</div><h3>Wallpapers</h3><p>Fresh backgrounds for your screens.</p></a>
-        <a class="category" href="#journal" data-jump="Photography" style="--glow:#34d399"><span class="arrow">↗</span><div class="cat-icon">📷</div><h3>Photography</h3><p>Little moments, big perspectives.</p></a>
-        <a class="category" href="#journal" data-jump="Creative Ideas" style="--glow:#f472b6"><span class="arrow">↗</span><div class="cat-icon">💡</div><h3>Creative Ideas</h3><p>Prompts, inspiration & experiments.</p></a>
-        <a class="category" href="#journal" data-jump="Tutorials" style="--glow:#fbbf24"><span class="arrow">↗</span><div class="cat-icon">🪄</div><h3>Tutorials</h3><p>Simple guides to learn and create.</p></a>
+        <a class="category" href="#posts" data-jump="Digital Art">
+          <span class="emoji">🎨</span><strong>Digital Art</strong>
+        </a>
+        <a class="category" href="#posts" data-jump="Sketches">
+          <span class="emoji">✏️</span><strong>Sketches</strong>
+        </a>
+        <a class="category" href="#posts" data-jump="Wallpapers">
+          <span class="emoji">🌌</span><strong>Wallpapers</strong>
+        </a>
+        <a class="category" href="#posts" data-jump="Photography">
+          <span class="emoji">📷</span><strong>Photography</strong>
+        </a>
+        <a class="category" href="#posts" data-jump="Tutorials">
+          <span class="emoji">💡</span><strong>Tutorials</strong>
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="journal">
-      <div class="section-head"><div><div class="kicker">The creative journal</div><h2>Fresh from the <span class="gradient">studio.</span></h2></div><p>Browse the latest stories, collections and creative experiments.</p></div>
-      <div class="toolbar">
-        <div class="filters" id="filters">
-          <button class="filter active" data-filter="All">All posts</button>
-          <button class="filter" data-filter="Digital Art">Digital Art</button>
-          <button class="filter" data-filter="Sketches">Sketches</button>
-          <button class="filter" data-filter="Wallpapers">Wallpapers</button>
-          <button class="filter" data-filter="Photography">Photography</button>
-          <button class="filter" data-filter="Creative Ideas">Ideas</button>
-          <button class="filter" data-filter="Tutorials">Tutorials</button>
-        </div>
-        <input class="search" id="search" type="search" placeholder="Search the studio…" aria-label="Search posts">
+  <section id="posts">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">The creative collection</div>
+        <h2>Latest Discoveries</h2>
+        <p>Explore our collection of creative inspiration.</p>
       </div>
-      <div class="posts" id="posts">
-        <article class="post" data-category="Digital Art" data-title="Dream in violet — a digital art study">
-          <div class="thumb" style="--art:linear-gradient(140deg,#24103f,#101b37);--shape1:#a855f7;--shape2:#22d3ee"><span class="symbol">✺</span><span class="thumb-label">Digital Art</span></div>
-          <div class="postbody"><div class="meta"><span>Digital Art</span><span>Studio note 01</span></div><h3>Dream in Violet: A Digital Art Study</h3><p>Explore how glowing colour, layered shapes and contrast can turn a simple canvas into a tiny universe.</p><div class="postfoot"><button class="read" data-post="violet">Read article ↗</button><span>4 min read</span></div></div>
-        </article>
-        <article class="post" data-category="Sketches" data-title="The beauty of simple pencil sketches">
-          <div class="thumb" style="--art:linear-gradient(135deg,#25242b,#77717c);--shape1:#ddd6ce;--shape2:#393443"><span class="symbol">✎</span><span class="thumb-label">Sketches</span></div>
-          <div class="postbody"><div class="meta"><span>Sketches</span><span>Studio note 02</span></div><h3>The Beauty of a Simple Pencil Sketch</h3><p>Lines do not need to be perfect. Learn to notice shapes, shadows and the small details around you.</p><div class="postfoot"><button class="read" data-post="sketch">Read article ↗</button><span>3 min read</span></div></div>
-        </article>
-        <article class="post" data-category="Wallpapers" data-title="Midnight glow free abstract wallpaper">
-          <div class="thumb" style="--art:linear-gradient(135deg,#090d22,#251044);--shape1:#7c3aed;--shape2:#0891b2"><span class="symbol">◈</span><span class="thumb-label">Wallpaper</span></div>
-          <div class="postbody"><div class="meta"><span>Wallpapers</span><span>Free download</span></div><h3>Midnight Glow: Abstract Wallpaper</h3><p>A dark, dreamy purple-and-blue background made for a calm and creative screen.</p><div class="postfoot"><button class="read" data-post="wallpaper">Details ↗</button><button class="download" data-download="midnight">Download SVG ↓</button></div></div>
-        </article>
-        <article class="post" data-category="Photography" data-title="Finding beauty in everyday details">
-          <div class="thumb" style="--art:linear-gradient(135deg,#12312e,#1b263b);--shape1:#34d399;--shape2:#fbbf24"><span class="symbol">⌁</span><span class="thumb-label">Photography</span></div>
-          <div class="postbody"><div class="meta"><span>Photography</span><span>Studio note 04</span></div><h3>Finding Beauty in Everyday Details</h3><p>Look closer at light, reflections, textures and ordinary places. Inspiration is often already nearby.</p><div class="postfoot"><button class="read" data-post="photo">Read article ↗</button><span>3 min read</span></div></div>
-        </article>
-        <article class="post" data-category="Creative Ideas" data-title="Five tiny prompts to spark creativity">
-          <div class="thumb" style="--art:linear-gradient(135deg,#32152e,#171a36);--shape1:#ec4899;--shape2:#8b5cf6"><span class="symbol">✧</span><span class="thumb-label">Creative Ideas</span></div>
-          <div class="postbody"><div class="meta"><span>Creative Ideas</span><span>Studio note 05</span></div><h3>Five Tiny Prompts to Spark Creativity</h3><p>Try a one-colour artwork, draw a sound, redesign an everyday object or invent a dream landscape.</p><div class="postfoot"><button class="read" data-post="prompts">Read article ↗</button><span>2 min read</span></div></div>
-        </article>
-        <article class="post" data-category="Tutorials" data-title="A beginner guide to colour palettes">
-          <div class="thumb" style="--art:linear-gradient(135deg,#16213e,#30204f);--shape1:#67e8f9;--shape2:#c084fc"><span class="symbol">◉</span><span class="thumb-label">Tutorial</span></div>
-          <div class="postbody"><div class="meta"><span>Tutorials</span><span>Studio note 06</span></div><h3>A Beginner's Guide to Colour Palettes</h3><p>Start with one main colour, add a supporting shade and use a small accent to make details stand out.</p><div class="postfoot"><button class="read" data-post="colour">Read article ↗</button><span>4 min read</span></div></div>
-        </article>
-      </div>
-      <div class="empty" id="empty">No posts found. Try another search or category.</div>
-    </section>
 
-    <section>
+      <div class="controls">
+        <input id="searchInput" type="search" placeholder="Search art, wallpapers, sketches...">
+        <button class="filter active" data-filter="All">All</button>
+        <button class="filter" data-filter="Digital Art">Art</button>
+        <button class="filter" data-filter="Sketches">Sketches</button>
+        <button class="filter" data-filter="Wallpapers">Wallpapers</button>
+        <button class="filter" data-filter="Photography">Photography</button>
+        <button class="filter" data-filter="Tutorials">Tutorials</button>
+      </div>
+
+      <div class="posts-grid" id="postsGrid">
+
+        <article class="post-card" data-category="Digital Art">
+          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800" alt="Creative art and painting" loading="lazy">
+          <div class="post-content">
+            <div class="tag">Digital Art</div>
+            <h3>The World of Colour</h3>
+            <p>Explore the beauty of colours, shapes and imagination. Every creative journey begins with an idea.</p>
+            <a class="post-link" href="#about">Explore more →</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="Wallpapers">
+          <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800" alt="Beautiful sunrise landscape wallpaper" loading="lazy">
+          <div class="post-content">
+            <div class="tag">Wallpapers</div>
+            <h3>Golden Morning</h3>
+            <p>A peaceful landscape for a fresh and beautiful screen background.</p>
+            <a class="post-link" href="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1600" download="golden-morning.jpg">Download image ↓</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="Sketches">
+          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800" alt="Artist painting and drawing" loading="lazy">
+          <div class="post-content">
+            <div class="tag">Sketches</div>
+            <h3>From a Blank Page</h3>
+            <p>Every masterpiece starts with a simple line. Keep practising and exploring your style.</p>
+            <a class="post-link" href="#about">Explore more →</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="Photography">
+          <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800" alt="Mountain and lake landscape" loading="lazy">
+          <div class="post-content">
+            <div class="tag">Photography</div>
+            <h3>Nature's Quiet Moments</h3>
+            <p>Beautiful landscapes remind us to notice the little details around us.</p>
+            <a class="post-link" href="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1600" target="_blank" rel="noopener">View photograph →</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="Tutorials">
+          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800" alt="Notebook for creative ideas" loading="lazy">
+          <div class="post-content">
+            <div class="tag">Tutorials</div>
+            <h3>Build a Creative Journal</h3>
+            <p>Collect your ideas, sketches, inspirations and memories in one creative notebook.</p>
+            <a class="post-link" href="#about">Explore more →</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="Wallpapers">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Beautiful scenic nature wallpaper" loading="lazy">
+          <div class="post-content">
+            <div class="tag">Wallpapers</div>
+            <h3>Escape into Nature</h3>
+            <p>Bring a little calm and natural beauty to your screen.</p>
+            <a class="post-link" href="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600" download="nature-wallpaper.jpg">Download image ↓</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="Digital Art">
+          <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800" alt="Colourful abstract art" loading="lazy">
+          <div class="post-content">
+            <div class="tag">Digital Art</div>
+            <h3>Abstract Expressions</h3>
+            <p>Experiment with shapes, textures and colours to create your own visual language.</p>
+            <a class="post-link" href="#about">Explore more →</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="Photography">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800" alt="Sunlight shining through a forest" loading="lazy">
+          <div class="post-content">
+            <div class="tag">Photography</div>
+            <h3>Into the Green</h3>
+            <p>Discover the atmosphere of forests, sunlight and beautiful natural scenes.</p>
+            <a class="post-link" href="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600" target="_blank" rel="noopener">View photograph →</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="Tutorials">
+          <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800" alt="Creative desk and art materials" loading="lazy">
+          <div class="post-content">
+            <div class="tag">Tutorials</div>
+            <h3>Find Your Inspiration</h3>
+            <p>Try new ideas, explore different styles and make time for creativity every day.</p>
+            <a class="post-link" href="#about">Explore more →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="noResults">No posts found. Try another search!</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
       <div class="feature">
-        <div class="feature-visual">✦</div>
-        <div><div class="kicker">Your next creative break</div><h2>Make space for <span class="gradient">imagination.</span></h2><p>Collect inspiration, explore new styles and find your own creative rhythm. This studio is a starting point — the next idea is yours.</p><a class="btn primary" href="#journal">Find your inspiration ↗</a></div>
+        <div>
+          <div class="eyebrow">A little inspiration</div>
+          <h2>Your imagination deserves a place to grow.</h2>
+          <p>
+            Whether you love drawing, photography, digital design
+            or collecting beautiful wallpapers, there is always
+            something new to discover.
+          </p>
+          <a class="btn" href="#categories">Discover categories →</a>
+        </div>
+        <div class="feature-art">✦ 🎨 ✦</div>
       </div>
-    </section>
-    <section id="about">
-      <div class="newsletter"><div><small>WELCOME TO THE STUDIO</small><h2>Creativity belongs to everyone.</h2><p>Rush Creative Studio is a growing space for art, visual ideas and inspiration.</p></div><a class="btn secondary" href="#home">Back to top ↑</a></div>
-    </section>
-  </div>
-</main>
-<footer><div class="wrap foot"><div><strong style="color:#eee">RUSH CREATIVE STUDIO</strong><br>CREATE. EXPLORE. INSPIRE.</div><div class="footlinks"><a href="#home">Home</a><a href="#explore">Explore</a><a href="#journal">Journal</a><a href="#about">About</a></div><div>© <span id="year"></span> Rush Creative Studio</div></div></footer>
+    </div>
+  </section>
 
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modalbox"><button class="close" id="closeModal">Close ✕</button><div class="kicker">From the creative journal</div><h2 id="modalTitle"></h2><div id="modalText"></div></div></div>
+  <section id="about">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Behind the studio</div>
+        <h2>About Rush Creative Studio</h2>
+        <p>A little space made for people who love creativity.</p>
+      </div>
+
+      <div class="about-box">
+        <div class="about-item">
+          <h3>🎨 Creativity</h3>
+          <p>Discover artistic ideas, creative experiments and inspiration.</p>
+        </div>
+        <div class="about-item">
+          <h3>🌌 Inspiration</h3>
+          <p>Explore beautiful visuals and ideas for your next project.</p>
+        </div>
+        <div class="about-item">
+          <h3>✨ Discovery</h3>
+          <p>Find new things to learn, create and enjoy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>RUSH CREATIVE STUDIO</strong></p>
+    <p>Made with creativity and imagination.</p>
+    <p>© 2026 Rush Creative Studio. All rights reserved.</p>
+  </div>
+</footer>
 
 <script>
-  const postsData={
-    violet:["Dream in Violet: A Digital Art Study","Digital art is a playground for colour, shape and imagination. Begin with a simple background, choose one colour that sets the mood, then add a few contrasting shapes. Build depth with transparent layers and soft glows. The goal is not to fill every space — let the artwork breathe. Try making your own version with three colours and one bold focal point."],
-    sketch:["The Beauty of a Simple Pencil Sketch","A sketch is a way of learning to see. Start by observing the largest shapes before adding small details. Use light lines to map the form, then gradually build darker areas where shadows appear. Keep a page for experiments: quick objects, leaves, shoes, buildings or anything nearby. Every page is practice, not a test."],
-    wallpaper:["Midnight Glow: Abstract Wallpaper","This original abstract wallpaper concept uses a deep midnight background with glowing violet and cyan shapes. It is designed to feel calm, modern and a little futuristic. Use the download button on this card to save the artwork as an SVG file. You can open it in a browser or use a graphics editor to resize or customise it."],
-    photo:["Finding Beauty in Everyday Details","Photography is about noticing. Look for interesting light falling across a wall, reflections after rain, patterns in leaves or shapes made by shadows. Try taking several frames from different angles. You do not need complicated equipment — curiosity and observation are a great place to begin."],
-    prompts:["Five Tiny Prompts to Spark Creativity","1. Create an artwork using only one colour and its shades. 2. Draw a sound as a shape. 3. Turn an everyday object into a futuristic invention. 4. Design a wallpaper inspired by your favourite season. 5. Sketch a place that exists only in your imagination. Save your favourite experiment and build on it later."],
-    colour:["A Beginner's Guide to Colour Palettes","Choose a main colour that creates the mood. Add a supporting colour that works alongside it, then choose one accent for small details. A simple palette might use deep navy, soft violet and bright cyan. Check that text has enough contrast against its background, and repeat your colours consistently to make a design feel connected."]
-  };
-  const modal=document.getElementById('modal');
-  document.querySelectorAll('[data-post]').forEach(b=>b.addEventListener('click',()=>{const d=postsData[b.dataset.post];document.getElementById('modalTitle').textContent=d[0];document.getElementById('modalText').innerHTML='<p>'+d[1].replace(/\n/g,'<br>')+'</p>';modal.classList.add('open')}));
-  document.getElementById('closeModal').addEventListener('click',()=>modal.classList.remove('open'));
-  modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
-  const filterButtons=[...document.querySelectorAll('.filter')], cards=[...document.querySelectorAll('.post')], search=document.getElementById('search');let active='All';
-  function update(){let q=search.value.toLowerCase(),count=0;cards.forEach(c=>{let ok=(active==='All'||c.dataset.category===active)&&(c.dataset.title.toLowerCase().includes(q)||c.textContent.toLowerCase().includes(q));c.style.display=ok?'':'none';if(ok)count++});document.getElementById('empty').style.display=count?'none':'block'}
-  filterButtons.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filterButtons.forEach(x=>x.classList.toggle('active',x===b));update()}));search.addEventListener('input',update);
-  document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',()=>{active=a.dataset.jump;filterButtons.forEach(x=>x.classList.toggle('active',x.dataset.filter===active));update()}));
-  document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navlinks').classList.toggle('show'));
-  document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('show')));
-  document.getElementById('year').textContent=new Date().getFullYear();
-  function downloadSvg(name){
-    const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920"><defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#080b1c"/><stop offset="1" stop-color="#241044"/></linearGradient><radialGradient id="a"><stop stop-color="#d8b4fe"/><stop offset=".45" stop-color="#8b5cf6"/><stop offset="1" stop-color="#4c1d95" stop-opacity="0"/></radialGradient><radialGradient id="b"><stop stop-color="#67e8f9"/><stop offset="1" stop-color="#0891b2" stop-opacity="0"/></radialGradient><filter id="blur"><feGaussianBlur stdDeviation="28"/></filter></defs><rect width="1080" height="1920" fill="url(#bg)"/><circle cx="740" cy="520" r="430" fill="url(#a)" filter="url(#blur)"/><circle cx="260" cy="1320" r="360" fill="url(#b)" filter="url(#blur)"/><circle cx="540" cy="920" r="270" fill="none" stroke="#ffffff" stroke-opacity=".3" stroke-width="2"/><circle cx="540" cy="920" r="220" fill="none" stroke="#c4b5fd" stroke-opacity=".4" stroke-width="2"/><path d="M0 1500 Q300 1250 560 1530 T1080 1420 V1920 H0Z" fill="#0e1631" fill-opacity=".6"/><text x="540" y="1780" fill="#e9d5ff" text-anchor="middle" font-family="Arial" font-size="34" letter-spacing="12">RUSH CREATIVE STUDIO</text></svg>`;
-    const blob=new Blob([svg],{type:'image/svg+xml'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name+'.svg';a.click();URL.revokeObjectURL(url);
+  const searchInput = document.getElementById("searchInput");
+  const posts = [...document.querySelectorAll(".post-card")];
+  const filters = [...document.querySelectorAll(".filter")];
+  const noResults = document.getElementById("noResults");
+
+  let currentFilter = "All";
+
+  function updatePosts() {
+    const query = searchInput.value.toLowerCase();
+    let visible = 0;
+
+    posts.forEach(post => {
+      const category = post.dataset.category;
+      const matchesCategory = currentFilter === "All" || category === currentFilter;
+      const matchesSearch = post.textContent.toLowerCase().includes(query);
+
+      const show = matchesCategory && matchesSearch;
+      post.style.display = show ? "" : "none";
+
+      if (show) visible++;
+    });
+
+    noResults.style.display = visible ? "none" : "block";
   }
-  document.querySelectorAll('[data-download]').forEach(b=>b.addEventListener('click',()=>downloadSvg('rush-midnight-glow-wallpaper')));
+
+  searchInput.addEventListener("input", updatePosts);
+
+  filters.forEach(button => {
+    button.addEventListener("click", () => {
+      currentFilter = button.dataset.filter;
+
+      filters.forEach(item => item.classList.remove("active"));
+      button.classList.add("active");
+
+      updatePosts();
+    });
+  });
+
+  document.querySelectorAll("[data-jump]").forEach(link => {
+    link.addEventListener("click", () => {
+      currentFilter = link.dataset.jump;
+
+      filters.forEach(item => {
+        item.classList.toggle("active", item.dataset.filter === currentFilter);
+      });
+
+      updatePosts();
+    });
+  });
 </script>
+
 </body>
 </html>
